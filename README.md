@@ -1,3 +1,7 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/wbpb0x4eil5h1w1n?svg=true)](https://ci.appveyor.com/project/Turovae/ra16-props-listing)
+
+---
+
 Список предложений
 ===
 
