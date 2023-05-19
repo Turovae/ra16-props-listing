@@ -4,6 +4,7 @@
 // import './App.css';
 import Listing from './components/Listing';
 import data from '../data/etsy.json';
+console.log(data);
 
 function App() {
   return (

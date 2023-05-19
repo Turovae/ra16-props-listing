@@ -1,17 +1,19 @@
-interface itemProps {
+import Title from "./Title"
+
+interface Item {
   url: string,
   title: string,
   MainImage: { url_570xN: string },
   price: string,
   currency_code: string,
-  quantity: string,
+  quantity: number,
 }
 
-interface offerProps {
-  item: itemProps,
+interface Offer {
+  item: Item,
 }
 
-function Offer(props: offerProps) {
+function Offer(props: Offer) {
   console.log(props);
   const { url, MainImage, title, price, currency_code, quantity } = props.item;
 
@@ -24,7 +26,7 @@ function Offer(props: offerProps) {
           </a>
         </div>
         <div className="item-details">
-          <p className="item-title">{title}</p>
+          <Title title={title} />
           <p className="item-price">{price}{currency_code}</p>
           <p className="item-quantity level-high">{quantity}</p>
         </div>
