@@ -29,19 +29,35 @@ import Offer from "./Offer";
 //   quantity?: number | undefined,
 // }
 
-type ItemProps = {
+// type ItemProps = {
+//   listing_id: number,
+//   state: string,
+//   url?: string | undefined,
+//   MainImage?: { url_570xN: string } | undefined,
+//   title?: string | undefined,
+//   price?: string | undefined,
+//   currency_code?: string | undefined,
+//   quantity?: number | undefined,
+// }
+
+interface Active {
   listing_id: number,
   state: string,
-  url?: string | undefined,
-  MainImage?: { url_570xN: string } | undefined,
-  title?: string | undefined,
-  price?: string | undefined,
-  currency_code?: string | undefined,
-  quantity?: number | undefined,
+  url: string,
+  MainImage: { url_570xN: string },
+  title: string,
+  price: string,
+  currency_code: string,
+  quantity: number,
+}
+
+interface Removed {
+  listing_id: number,
+  state: string,
 }
 
 interface ListingProps {
-  items?: Array<ItemProps>
+  items?: Array<Active | Removed>
 }
 
 function Listing(props: ListingProps) {
@@ -52,7 +68,6 @@ function Listing(props: ListingProps) {
   return (
     <div className="item-list">
       {items.map((item) => item.state === 'active'
-        && item.url
         ? <Offer key={item.listing_id} item={item} />
         : null)}
     </div>

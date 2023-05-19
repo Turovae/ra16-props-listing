@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Listing items={data} />
-      <Listing />
+      {/* <Listing /> */}
     </>
   );
 }
