@@ -1,5 +1,6 @@
 import Title from "./Title";
 import Price from "./Price";
+import Quantity from "./Quantity";
 
 interface Item {
   url: string,
@@ -29,7 +30,7 @@ function Offer(props: Offer) {
         <div className="item-details">
           <Title title={title} />
           <Price price={price} currency_code={currency_code} />
-          <p className="item-quantity level-high">{quantity}</p>
+          <Quantity quantity={quantity} />
         </div>
       </div>
     </>
