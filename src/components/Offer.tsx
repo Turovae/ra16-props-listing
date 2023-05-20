@@ -1,21 +1,9 @@
 import Title from "./Title";
 import Price from "./Price";
 import Quantity from "./Quantity";
+import { Item } from "../interaces";
 
-interface Item {
-  url: string,
-  title: string,
-  MainImage: { url_570xN: string },
-  price: string,
-  currency_code: string,
-  quantity: number,
-}
-
-interface Offer {
-  item: Item,
-}
-
-function Offer(props: Offer) {
+function Offer(props: { item: Item }) {
   console.log(props);
   const { url, MainImage, title, price, currency_code, quantity } = props.item;
 
